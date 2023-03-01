@@ -30,9 +30,22 @@ export default function Parent(){
  <div id="main1">
     <div className="nav-bar">
      <ul>
-        <li className={cru1 && "active"}>crumb-1</li>
-        <li className={cru2 && "active"}>crumb-2</li>
-        <li className={cru3 && "active"}>crumb-3</li>
+        <li className={cru1 && "active"} onClick={()=>{
+          setCru1(true)
+          setCru2(false)
+          setCru3(false)
+        }}>crumb-1</li>
+        <li className={cru2 && "active"}
+        onClick={()=>{
+          setCru1(false)
+          setCru2(true)
+          setCru3(false)
+        }}>crumb-2</li>
+        <li className={cru3 && "active"}
+        onClick={()=>{
+          setCru1(false)
+          setCru2(false)
+          setCru3(true)}}>crumb-3</li>
      </ul>
     </div>
     <div className="body">
